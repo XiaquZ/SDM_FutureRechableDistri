@@ -23,9 +23,9 @@ tar_option_set(
   resources = tar_resources(
     clustermq = tar_resources_clustermq(template = list(
       job_name = "future_rechable",
-      per_cpu_mem = "8000mb", #"3470mb"(wice thin node), #"21000mb" (genius bigmem， hugemem)"5100mb"
-      n_tasks = 2,
-      per_task_cpus = 14,
+      per_cpu_mem = "2500mb", #"3470mb"(wice thin node), #"21000mb" (genius bigmem， hugemem)"5100mb"
+      n_tasks = 1,
+      per_task_cpus = 72,
       walltime = "10:00:00"
     ))
   )
