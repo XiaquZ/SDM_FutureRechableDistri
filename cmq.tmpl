@@ -4,7 +4,7 @@
 #SBATCH --array=1-{{ n_jobs }}
 #SBATCH --ntasks={{ n_tasks | 1 }}
 #SBATCH --cpus-per-task={{ per_task_cpus | 72 }}
-##SBATCH --partition=superdome
+#SBATCH --partition=batch_sapphirerapids
 #SBATCH --time={{ walltime | 71:00:00 }}
 #SBATCH -M wice
 ##SBATCH --reservation=rocky9_pilot
