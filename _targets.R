@@ -16,7 +16,7 @@ options(
 )
 
 # Running locally on Windows
-options(clustermq.scheduler = "multiprocess")
+# options(clustermq.scheduler = "multiprocess")
 
 ## Settings for clustermq template when running clustermq on HPC
 tar_option_set(
@@ -37,12 +37,12 @@ tar_source()
 
 tar_plan(
   conh_files = list.files(
-    "I:/DATA/output/ConvexHull_Buffer/",
+    "/lustre1/scratch/348/vsc34871/input/Convexhull_Buffer/",
     full.names = T),
-  conh_dir = "I:/DATA/output/ConvexHull_Buffer/",
-  out_dir = "I:/DATA/output/BinaryMaps_FuturePotentialRechableDist/",
+  conh_dir = "/lustre1/scratch/348/vsc34871/input/Convexhull_Buffer/",
+  out_dir = "/lustre1/scratch/348/vsc34871/SDM_fut/results/BinaryMaps_FuturePotentialRechableDist/",
   sp = list.files(
-    "I:/DATA/input/Future_Binary_original/",  pattern = "\\.tif$",
+    "/lustre1/scratch/348/vsc34871/input/BinaryMaps_original/",  pattern = "\\.tif$",
     full.names = T),
 
 #tar_target(sp_name, gsub("^binary_|\\.tif$", "", basename(sp))),
