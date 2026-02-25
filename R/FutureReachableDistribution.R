@@ -2,7 +2,6 @@
 
 #' Process one species binary map into FuturePotentialReachable raster
 process_one_species_future_reachable <- function(sp,
-                                                 conh_files,
                                                  conh_dir,
                                                  out_dir) {
   sp_name <- gsub("^binary_|\\.tif$", "", basename(sp))

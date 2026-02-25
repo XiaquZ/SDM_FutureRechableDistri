@@ -36,9 +36,6 @@ tar_source()
 # tar_source("other_functions.R") # Source other scripts as needed.
 
 tar_plan(
-  conh_files = list.files(
-    "/lustre1/scratch/348/vsc34871/input/Convexhull_Buffer/",
-    full.names = T),
   conh_dir = "/lustre1/scratch/348/vsc34871/input/Convexhull_Buffer/",
   out_dir = "/lustre1/scratch/348/vsc34871/SDM_fut/results/BinaryMaps_FuturePotentialRechableDist/",
   sp = list.files(
@@ -53,7 +50,6 @@ tar_plan(
 tar_target(future_reachable_distributions,
            process_one_species_future_reachable(
              sp,
-             conh_files,
              conh_dir,
              out_dir
            ),
