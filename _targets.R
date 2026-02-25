@@ -25,7 +25,7 @@ tar_option_set(
       job_name = "future_rechable",
       per_cpu_mem = "3400mb", #"3470mb"(wice thin node), #"21000mb" (genius bigmem， hugemem)"5100mb"
       n_tasks = 1,
-      per_task_cpus = 72,
+      per_task_cpus = 36,
       walltime = "10:00:00"
     ))
   )
