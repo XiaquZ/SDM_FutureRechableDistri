@@ -23,14 +23,7 @@ process_one_species_future_reachable <- function(sp,
   # Start processing species binary maps.
   
   conh_path <- paste0(conh_dir, sp_name, "_ConvexHullBuffer.shp")
-  # if (!file.exists(conh_path)) {
-  #   return(list(species = sp_name, ok = FALSE, msg = "Convex hull not found", out = NA_character_))
-  # }
-  
   out_file <- paste0(out_dir, sp_name, "_FuturePotentialReachable.tif")
-  if (file.exists(out_file)) {
-    return(list(species = sp_name, ok = TRUE, msg = "Output already exists (skipped)", out = out_file))
-  }
   
   conh_poly <- terra::vect(conh_path)
   bin_rast  <- terra::rast(sp)
