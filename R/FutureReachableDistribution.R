@@ -50,9 +50,6 @@ process_one_species_future_reachable <- function(sp,
   # restore original NA everywhere
   actual_dist02[orig_na] <- NA
   terra::writeRaster(actual_dist02, out_file, overwrite = TRUE)
-  
-  rm(conh_poly, bin_rast, actual_dist02)
-  gc()
-  
+
   list(species = sp_name, ok = TRUE, msg = "saved", out = out_file)
 }
